@@ -24,19 +24,19 @@ public class StringCalculator {
             if(n < 0){
                 negatives.add(number);
             }
-            result += n;
+            if(n < 1001){
+                result += n;
+            }
 
         }
 
         if(!negatives.isEmpty()){
-            System.out.println("Inside negatives if statement");
             throw new IllegalArgumentException(
                     "Error: negatives not allowed: " + String.join(",", negatives)
             );
         }
 
         return result;
-
     }
 
 }

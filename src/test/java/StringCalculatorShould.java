@@ -2,10 +2,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.ValueSource;
 
 import static junit.framework.Assert.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class StringCalculatorShould {
 
@@ -48,5 +46,11 @@ public class StringCalculatorShould {
         }catch(IllegalArgumentException e){
             assertEquals("Error: negatives not allowed: -2,-3", e.getMessage());
         }
+    }
+
+    @Test
+    void ignoresNumbersGreaterThan1001() {
+        String stringOfNumbers = "1001,2";
+        assertEquals(2, stringCalculator.add(stringOfNumbers));
     }
 }

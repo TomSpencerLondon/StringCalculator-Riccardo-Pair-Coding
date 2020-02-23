@@ -5,6 +5,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static junit.framework.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class StringCalculatorShould {
 
@@ -33,9 +34,19 @@ public class StringCalculatorShould {
     }
 
     @Test
-    void customSeparatorsTo() {
+    void includesCustomSeparators() {
         String stringOfNumbers = "//;\n1;2";
         int result = 3;
         assertEquals(result, stringCalculator.add(stringOfNumbers));
+    }
+
+    @Test
+    void throwsExceptionForNegatives() {
+        String stringOfNumbers = "1,-2,-3";
+        try{
+            stringCalculator.add(stringOfNumbers);
+        }catch(IllegalArgumentException e){
+            assertEquals("Error: negatives not allowed: -2,-3", e.getMessage());
+        }
     }
 }

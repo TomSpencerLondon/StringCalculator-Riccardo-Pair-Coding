@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="381cb338-4fe8-4547-884d-6eefdd991701" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/StringCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StringCalculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/StringCalculatorShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StringCalculatorShould.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/StringCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/StringCalculator.class" afterDir="false" />
@@ -46,7 +47,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -65,7 +66,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.StringCalculatorShould">
+  <component name="RunManager" selected="JUnit.StringCalculatorShould.throwsExceptionForNegatives">
     <configuration name="StringCalculatorShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StringCalculator" />
       <option name="PACKAGE_NAME" value="" />
@@ -85,8 +86,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StringCalculatorShould.throwsExceptionForNegatives" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StringCalculator" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="StringCalculatorShould" />
+      <option name="METHOD_NAME" value="throwsExceptionForNegatives" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StringCalculatorShould.throwsExceptionForNegatives" />
         <item itemvalue="JUnit.StringCalculatorShould" />
         <item itemvalue="JUnit.StringCalculatorShould.customSeparatorsTo" />
       </list>
@@ -103,7 +115,7 @@
       <option name="presentableId" value="Default" />
       <updated>1582197085548</updated>
       <workItem from="1582197087151" duration="4332000" />
-      <workItem from="1582278677750" duration="6427000" />
+      <workItem from="1582278677750" duration="11174000" />
     </task>
     <servers />
   </component>

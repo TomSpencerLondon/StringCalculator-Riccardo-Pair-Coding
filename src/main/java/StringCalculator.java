@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StringCalculator {
-
     public int add(String stringNumber) throws IllegalArgumentException {
         int result = 0;
         String separators = ",\n";
@@ -12,20 +11,7 @@ public class StringCalculator {
             return 0;
         }
 
-        if(stringNumber.startsWith("//")){
-            String[] array = stringNumber.split("\n");
-            String newSeparators = array[0].substring(2);
-
-            if(newSeparators.contains("[")){
-                String[] Separators = newSeparators.substring(1, newSeparators.length()-1).split("\\]\\[");
-                newSeparators = String.join("|", Separators);
-            }
-
-            separators += newSeparators;
-            stringNumber = array[1];
-        }
-
-
+        separators += format(stringNumber);
 
         String[] numbers = stringNumber.split("[" + separators + "]");
 
@@ -48,6 +34,22 @@ public class StringCalculator {
         }
 
         return result;
+    }
+
+    private String format(String stringNumber){
+        String newSeparators = "";
+        if(stringNumber.startsWith("//")){
+            String[] array = stringNumber.split("\n");
+            newSeparators = array[0].substring(2);
+
+            if(newSeparators.contains("[")){
+                String[] Separators = newSeparators.substring(1, newSeparators.length()-1).split("\\]\\[");
+                newSeparators = String.join("|", Separators);
+            }
+
+        }
+        return newSeparators;
+
     }
 
 }

@@ -53,4 +53,10 @@ public class StringCalculatorShould {
         String stringOfNumbers = "1001,2";
         assertEquals(2, stringCalculator.add(stringOfNumbers));
     }
+
+    @Test
+    void separatorsOfAnyLengthIfSurroundedBySquareBrackets() {
+        String stringOfNumbers = "//[***]\n1***2***3";
+        assertEquals(6, stringCalculator.add(stringOfNumbers));
+    }
 }

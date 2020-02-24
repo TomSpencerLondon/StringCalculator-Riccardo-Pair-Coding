@@ -59,4 +59,10 @@ public class StringCalculatorShould {
         String stringOfNumbers = "//[***]\n1***2***3";
         assertEquals(6, stringCalculator.add(stringOfNumbers));
     }
+
+    @Test
+    void handlesMultipleSeparatorsWithAnyCharacterLength(){
+        String stringOfNumbers = "//[foo][bar]\n1foo2bar3";
+        assertEquals(6, stringCalculator.add(stringOfNumbers));
+    }
 }
